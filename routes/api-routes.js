@@ -16,12 +16,8 @@ module.exports = function (app) {
         console.log(data)
         return
       } else {
-        db.User.create({
-          email: req.body.email,
-          password: req.body.password
-        })
-          .then(function () {
-            res.redirect(307, "/");
+        db.User.create(req.body).then(function(dbUser) {
+            res.json(dbUser);
           })
           .catch(function (err) {
             console.log(err)
