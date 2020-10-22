@@ -1,31 +1,28 @@
-       <br><br><br>
-       <div> 
-        <h1 class="h1tag">    {{collStyle.Style.dataValues.style_name}}          </h1>
-        </div>
-        <hr>
-        
+<br><br><br>
+<div>
+    <h1 class="h1tag"> {{collStyle.Style.dataValues.style_name}} </h1>
+</div>
+<hr>
 
-        <div class="table">
-        <ul class="artwork-display" id= "horizontal list">
-            {{#each collArtwork.Artwork}}
-            <li>
-               <img class="image" ; src={{this.dataValues.artwork_image}} >
-                <br><br>
-               <a class="uk-button uk-button-default button-position" href="#modal-center" uk-toggle>Read More</a>
-               <div id="modal-center" class="uk-flex-top" uk-modal>
+
+<div class="table">
+    <ul class="artwork-display" id="horizontal list">
+        {{#each collArtwork.Artwork}}
+        <li>
+            <img class="image" ; src={{this.dataValues.artwork_image}}>
+            <br><br>
+            <a class="uk-button uk-button-default button-position" href="#modal-center" uk-toggle>Read More</a>
+            <div id="modal-center" class="uk-flex-top {{this.dataValues.artwork_name}}" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                 <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div>
-                 <p>Name: {{this.dataValues.artwork_name}}</p>
-                 <p>Description : {{this.dataValues.artwork_descript}}</p>
-               </div>
-               </div>
-               </div>
-                <br><br>
-            </li>
-            {{/each}}
-        </ul>
-        </div>
-
-
- 
+                    <button class="uk-modal-close-default" uk-toggle="target: .{{this.dataValues.artwork_name}}" type="button" uk-close></button>
+                    <div>
+                        <p>Name: {{this.dataValues.artwork_name}}</p>
+                        <p>Description : {{this.dataValues.artwork_descript}}</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </li>
+        {{/each}}
+    </ul>
+</div>
