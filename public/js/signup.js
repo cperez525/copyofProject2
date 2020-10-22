@@ -34,7 +34,7 @@ $(document).ready(function () {
     })
       .then(function (data) {
         window.location.replace("/manager");
-        // If there's an error, handle it by throwing up a bootstrap alert
+        alert("User has been created. Only one user can currently exist in the system - please use the login credentials you provided to log into the existing account in the future.")
       })
       .fail(function(err){
         console.log(err);
