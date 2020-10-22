@@ -12,9 +12,9 @@
             <img class="image" ; src={{this.dataValues.artwork_image}}>
             <br><br>
             <a class="uk-button uk-button-default button-position" href="#modal-center" uk-toggle>Read More</a>
-            <div id="modal-center" class="uk-flex-top {{this.dataValues.artwork_name}}" uk-modal>
+            <div id="modal-center" class="uk-flex-top" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                    <button class="uk-modal-close-default" uk-toggle="target: .{{this.dataValues.artwork_name}}" type="button" uk-close></button>
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
                     <div>
                         <p>Name: {{this.dataValues.artwork_name}}</p>
                         <p>Description : {{this.dataValues.artwork_descript}}</p>
