@@ -13,8 +13,8 @@ module.exports = function (app) {
 
     db.User.findAll({}).then(function (data) {
       if (data.length != 0) {
-        throw new Error("User exists");
-        return
+        
+        return done("user exists")
       } else {
         db.User.create(req.body).then(function(dbUser) {
             res.json(dbUser);
