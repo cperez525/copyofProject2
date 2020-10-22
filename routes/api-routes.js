@@ -13,7 +13,7 @@ module.exports = function (app) {
 
     db.User.findAll({}).then(function (data) {
       if (data.length != 0) {
-        console.log(data)
+        res.json(err)
         return
       } else {
         db.User.create(req.body).then(function(dbUser) {
