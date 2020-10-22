@@ -38,6 +38,7 @@ $(document).ready(function() {
       })
       .catch(function(err) {
         console.log(err);
+        alert("Login credentials are incorrect.")
       });
   }
 });
